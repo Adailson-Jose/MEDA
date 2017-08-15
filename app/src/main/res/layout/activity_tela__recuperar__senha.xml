@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/raizRecuperarSenha"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="visible"
+    android:background="#dddddd">
+
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical"
+        android:visibility="visible"
+        android:weightSum="1"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="3dp">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_weight="0.07"
+            android:fontFamily="serif"
+            android:text="RECUPERAÇAO DE SENHA"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            tools:layout_weight="0.06"
+            tools:text="RECUPERAÇAO DE SENHA" />
+
+
+        <EditText
+            android:id="@+id/editCPF"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:ems="10"
+            android:hint="Cpf"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/editEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Email"
+            android:inputType="textWebEmailAddress" />
+
+        <EditText
+            android:id="@+id/editNovaSenha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Nova Senha"
+            android:inputType="textPassword" />
+
+
+        <Button
+            android:id="@+id/btAlterarSenha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="ALTERAR SENHA"
+            android:textColor="#000000"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btCancelarAlteracao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="CANCELAR RECUPERAÇÃO"
+            android:textColor="#000000"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+</ScrollView>

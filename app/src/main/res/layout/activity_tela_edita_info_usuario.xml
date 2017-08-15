@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/raizEditarinfomacaoUsuario"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#dddddd">
+
+    <LinearLayout
+        android:layout_width="344dp"
+        android:layout_height="495dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp"
+        tools:ignore="MissingConstraints">
+
+        <EditText
+            android:id="@+id/editTextNome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/editTextEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textEmailAddress" />
+
+        <Button
+            android:id="@+id/btSalvar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SALVAR ALTERAÇOES"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

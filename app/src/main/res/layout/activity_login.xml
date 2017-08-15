@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/raizLogin"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#dddddd">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="1"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp">
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_weight="0.16"
+            android:enabled="false"
+            android:fontFamily="serif"
+            android:text="BEM-VINDO"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="@android:color/black"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            tools:text="BEM-VINDO" />
+
+        <EditText
+            android:id="@+id/editUsuario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Usuário"
+            android:inputType="number"
+            android:text="" />
+
+        <EditText
+            android:id="@+id/editSenha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Senha"
+            android:inputType="textPassword"
+            android:text="" />
+
+        <Button
+            android:id="@+id/btLogar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="LOGAR"
+            android:textColor="#000000"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btRecuperarSenha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="RECUPERAR SENHA"
+            android:textColor="#000000"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btCadastrarUsuario"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="CADASTRAR "
+            android:textColor="#000000"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.16"
+            app:srcCompat="@drawable/comida_tambem_e" />
+
+    </LinearLayout>
+</ScrollView>
