@@ -38,7 +38,7 @@ public class TelaCadastrarUsuario extends AppCompatActivity {
             public void onClick(View v) {
                 ViewGroup group = (ViewGroup) findViewById(R.id.raizCadastroUsuario);
                 Pessoa pessoa = new Pessoa();
-                ReadPessoa buscar = new ReadPessoa(getApplicationContext());
+                PessoaDao buscar = new PessoaDao(getApplicationContext());
                 boolean resultado = false;
                 String cpf = editNovoUsuario.getText().toString();
                 String nome = editNovoNome.getText().toString();
@@ -70,17 +70,14 @@ public class TelaCadastrarUsuario extends AppCompatActivity {
                     pessoa.setEmail(email);
                     pessoa.setCpf(Long.parseLong(cpf));
                     pessoa.setSenha(senha);
-                    UpdatePessoa inserir = new UpdatePessoa(getApplicationContext());
-                    if (inserir.insertPessoa(pessoa)) {
+                    if (buscar.insertPessoa(pessoa)) {
                         Toast.makeText(TelaCadastrarUsuario.this, "Pessoa foi inserida com sucesso!", Toast.LENGTH_SHORT).show();
                     } else {
-                        Toast.makeText(TelaCadastrarUsuario.this, R.string.ErroInserirPessoa, Toast.LENGTH_SHORT).show();
+                        Toast.makeText(TelaCadastrarUsuario.this,"Erro ao inserir pessoa.", Toast.LENGTH_SHORT).show();
                     }
-
-                    Toast.makeText(TelaCadastrarUsuario.this, R.string.CadastroSucesso, Toast.LENGTH_LONG).show();
-
+                    Toast.makeText(TelaCadastrarUsuario.this, "Cadastro realizado com sucesso.", Toast.LENGTH_LONG).show();
                 } else {
-                    Toast.makeText(TelaCadastrarUsuario.this, R.string.CPFJaCadastrado, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(TelaCadastrarUsuario.this,"Pessoa já cadstrada.", Toast.LENGTH_SHORT).show();
 
                 }
             }

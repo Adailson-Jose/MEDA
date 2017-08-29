@@ -14,7 +14,7 @@ public class TelaInformacaoUsuario extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tela_informacao_usuario);
-        ReadPessoa busca = new ReadPessoa(getApplicationContext());
+        PessoaDao busca = new PessoaDao(getApplicationContext());
         textViewMinhasInformacoes = (TextView) findViewById(R.id.textViewMinhasInformacoes);
         btEditaMinhasInformacoes = (Button) findViewById(R.id.btEditaMinhasInformacoes);
 

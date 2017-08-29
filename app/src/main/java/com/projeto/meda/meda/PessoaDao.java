@@ -1,5 +1,6 @@
 package com.projeto.meda.meda;
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -7,19 +8,16 @@ import android.database.sqlite.SQLiteDatabase;
 import java.util.ArrayList;
 
 /**
- * Created by oi on 01/08/2017.
+ * Created by oi on 29/08/2017.
  */
 
-public class ReadPessoa {
-
+public class PessoaDao {
     private SQLiteDatabase db;
     private CreatBancoDados dbHelper;
 
-
-    public ReadPessoa(Context context) {
+    public PessoaDao(Context context) {
         dbHelper = new CreatBancoDados(context);
     }
-
 
     public ArrayList<Pessoa> getListaPessoas() {
         db = dbHelper.getReadableDatabase();
@@ -52,7 +50,6 @@ public class ReadPessoa {
 
         return pessoaArray;
     }
-    //Obter pessoa pelo cpf
 
     public Pessoa getPessoa(Long cpf) {
         db = dbHelper.getReadableDatabase();
@@ -73,5 +70,42 @@ public class ReadPessoa {
         }
 
     }
+    public boolean insertPessoa(Pessoa pessoa) {
+        db = dbHelper.getWritableDatabase();
 
+        ContentValues valores = new ContentValues();
+        valores.put(CreatBancoDados.getColunaCpf(), pessoa.getCpf());
+        valores.put(CreatBancoDados.getColunaNome(), pessoa.getNome());
+        valores.put(CreatBancoDados.getColunaEmail(), pessoa.getEmail());
+        valores.put(CreatBancoDados.getColunaSenha(), pessoa.getSenha());
+        db.insert(CreatBancoDados.getNomeTabelaPessoa(), null, valores);
+        db.close();
+        return true;
+    }
+
+    public boolean updatePessoa(Pessoa pessoa) {
+        db = dbHelper.getWritableDatabase();
+        String where = "cpf = '" + Long.toString(pessoa.getCpf()) + "'";
+        ContentValues valores = new ContentValues();
+        valores.put(CreatBancoDados.getColunaCpf(), pessoa.getCpf());
+        valores.put(CreatBancoDados.getColunaNome(), pessoa.getNome());
+        valores.put(CreatBancoDados.getColunaEmail(), pessoa.getEmail());
+        valores.put(CreatBancoDados.getColunaSenha(), pessoa.getSenha());
+        db.update(CreatBancoDados.getNomeTabelaPessoa(), valores, where, null);
+        db.close();
+        return true;
+    }
+    public boolean deleteTablePessoa() {
+        String deletTable = "DROP TABLE IF EXISTS " + CreatBancoDados.getNomeTabelaPessoa();
+        db.execSQL(deletTable);
+        db.close();
+        return true;
+    }
+
+    public boolean deletePessoa(Pessoa pessoa) {
+        String deletePessoa = "cpf = '" + Long.toString(pessoa.getCpf()) + "'";
+        db.delete(CreatBancoDados.getNomeTabelaPessoa(), deletePessoa, null);
+        db.close();
+        return true;
+    }
 }

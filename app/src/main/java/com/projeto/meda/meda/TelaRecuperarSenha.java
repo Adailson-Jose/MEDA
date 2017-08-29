@@ -25,8 +25,7 @@ public class TelaRecuperarSenha extends Activity {
         btAlterarSenha.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ReadPessoa buscar = new ReadPessoa(getApplicationContext());
-                UpdatePessoa atualizar = new UpdatePessoa(getApplicationContext());
+                PessoaDao buscar = new PessoaDao(getApplicationContext());
                 ViewGroup group = (ViewGroup) findViewById(R.id.raizRecuperarSenha);
                 LimparTela limparTela = new LimparTela();
                 String cpfStr = editCPF.getText().toString();
@@ -56,14 +55,14 @@ public class TelaRecuperarSenha extends Activity {
                     pessoa = buscar.getPessoa(Long.parseLong(loginCpf));
                     if (pessoa != null && pessoa.getSenha().equals(novaSenha)) {
                         pessoa.setSenha(novaSenha);
-                        atualizar.updatePessoa(pessoa);
-                        Toast.makeText(TelaRecuperarSenha.this, R.string.SenhaAtualizada, Toast.LENGTH_LONG).show();
+                        buscar.updatePessoa(pessoa);
+                        Toast.makeText(TelaRecuperarSenha.this, "Senha atualizada com sucesso.", Toast.LENGTH_LONG).show();
                     } else {
-                        Toast.makeText(TelaRecuperarSenha.this, R.string.SenhaNaoAtualizada, Toast.LENGTH_LONG).show();
+                        Toast.makeText(TelaRecuperarSenha.this, "Senha não atualizada.", Toast.LENGTH_LONG).show();
 
                     }
                 } else {
-                    Toast.makeText(TelaRecuperarSenha.this, R.string.FaltaPreenchimento, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(TelaRecuperarSenha.this,"Falta campos serem preenchidos.", Toast.LENGTH_SHORT).show();
 
                 }
             }

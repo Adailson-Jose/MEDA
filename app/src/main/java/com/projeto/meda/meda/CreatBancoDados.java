@@ -9,7 +9,7 @@ import android.database.sqlite.SQLiteOpenHelper;
  */
 public class CreatBancoDados extends SQLiteOpenHelper {
     private static final int VERSAO_BANCO = 1;
-    private static final String NOME_BANCO = "db_biblioteca";
+    private static final String NOME_BANCO = "db_meda";
     //VARIAVES DA TABELA PESSOA
     private static final String TABELA_PESSOA = "TB_PESSOA";
     private static final String COLUNA_ID = "ID";
@@ -17,7 +17,7 @@ public class CreatBancoDados extends SQLiteOpenHelper {
     private static final String COLUNA_NOME = "NOME";
     private static final String COLUNA_EMAIL = "EMAIL";
     private static final String COLUNA_SENHA = "SENHA";
-    private static final String PATH_DB = "/data/user/0/package com.projeto.bookfast.bookfast/databases/" + NOME_BANCO;
+    private static final String PATH_DB = "/data/user/0/package com.projeto.meda.meda/databases/" + NOME_BANCO;
 
     public CreatBancoDados(Context context) {
         super(context, NOME_BANCO, null, VERSAO_BANCO);

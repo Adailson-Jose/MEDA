@@ -21,7 +21,7 @@ public class TelaEditaInfoUsuario extends AppCompatActivity {
         btSalvar = (Button) findViewById(R.id.btSalvar);
         editTextEmail = (EditText) findViewById(R.id.editTextEmail);
         editTextNome = (EditText) findViewById(R.id.editTextNome);
-        ReadPessoa buscar = new ReadPessoa(getApplicationContext());
+        final PessoaDao buscar = new PessoaDao(getApplicationContext());
 
         Bundle bundle = getIntent().getExtras();
 
@@ -34,7 +34,6 @@ public class TelaEditaInfoUsuario extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 ViewGroup group = (ViewGroup) findViewById(R.id.raizEditarinfomacaoUsuario);
-                UpdatePessoa atualizar = new UpdatePessoa(getApplicationContext());
                 boolean resultado = false;
                 String nomeString = editTextNome.getText().toString();
                 String emailString = editTextEmail.getText().toString();
@@ -50,7 +49,7 @@ public class TelaEditaInfoUsuario extends AppCompatActivity {
                 if (!resultado) {
                     pessoa.setNome(nomeString);
                     pessoa.setEmail(emailString);
-                    atualizar.updatePessoa(pessoa);
+                    buscar.updatePessoa(pessoa);
                     LimparTela.clearForm(group);
                     editTextNome.requestFocus();
                     Toast.makeText(TelaEditaInfoUsuario.this, "INFORMAÇÕES ALTERADAS COM SUCESSO", Toast.LENGTH_SHORT).show();

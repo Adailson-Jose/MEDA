@@ -25,13 +25,13 @@ public class TelaInicialUsuarioComum extends Activity {
         WebSettings ws = webView.getSettings();
         ws.setJavaScriptEnabled(true);
         ws.supportZoom();
-        //webView.loadUrl("http://g1.globo.com/economia/agronegocios/globo-rural/");
-        webView.loadUrl("http://www.ecodesenvolvimento.org/dicas-e-guias/guias/2012/julho/guia-do-consumo-consciente-de-alimentos-para?tag=consumo_consciente");
-        ReadPessoa busca = new ReadPessoa(getApplicationContext());
+        //webView.loadUrl("http://www.ecodesenvolvimento.org/dicas-e-guias/guias/2012/julho/guia-do-consumo-consciente-de-alimentos-para?tag=consumo_consciente");
+        webView.loadUrl("http://g1.globo.com/economia/agronegocios/globo-rural/");
+        PessoaDao busca = new PessoaDao(getApplicationContext());
         Bundle bundle = getIntent().getExtras();
         if (bundle != null) {
             pessoa = busca.getPessoa(Long.parseLong(String.valueOf(bundle.get("KEY"))));
-            String dadosPessoa = "SEJA BEM-VNDO-> " + pessoa.getNome();
+            String dadosPessoa = "You're welcome-> " + pessoa.getNome();
             textViewBemVindo.setText(dadosPessoa);
         } else {
             textViewBemVindo.setText("UM ERRO OCORREU.");
@@ -45,6 +45,5 @@ public class TelaInicialUsuarioComum extends Activity {
                 startActivity(AbreTelaInformacaoUsuario);
             }
         });
-
     }
 }

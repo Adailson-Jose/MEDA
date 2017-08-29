@@ -16,13 +16,11 @@
             android:id="@+id/textViewBemVindo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-
             android:layout_marginTop="5dp"
             android:textAlignment="center"
             android:textAllCaps="true"
             android:textSize="20sp"
             android:textStyle="bold" />
-
 
         <TextView
             android:id="@+id/textView6"
@@ -44,7 +42,7 @@
             android:id="@+id/btMinhaInformacao"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="MINHAS INFORMAÇÕES "
+            android:text="My Info"
             android:textAlignment="center"
             android:textColor="#000000"
             android:textSize="14sp"

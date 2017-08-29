@@ -23,20 +23,19 @@
             android:layout_weight="0.16"
             android:enabled="false"
             android:fontFamily="serif"
-            android:text="BEM-VINDO"
+            android:text="Welcome"
             android:textAlignment="center"
             android:textAllCaps="true"
             android:textColor="@android:color/black"
             android:textSize="20dp"
-            android:textStyle="bold"
-            tools:text="BEM-VINDO" />
+            android:textStyle="bold"/>
 
         <EditText
             android:id="@+id/editUsuario"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="Usuário"
+            android:hint="User"
             android:inputType="number"
             android:text="" />
 
@@ -45,7 +44,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="Senha"
+            android:hint="Password"
             android:inputType="textPassword"
             android:text="" />
 
@@ -54,7 +53,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="LOGAR"
+            android:text="Login"
+            android:textAllCaps="false"
             android:textColor="#000000"
             android:textStyle="bold" />
 
@@ -62,7 +62,8 @@
             android:id="@+id/btRecuperarSenha"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="RECUPERAR SENHA"
+            android:text="Password Recover"
+            android:textAllCaps="false"
             android:textColor="#000000"
             android:textStyle="bold" />
 
@@ -70,7 +71,8 @@
             android:id="@+id/btCadastrarUsuario"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="CADASTRAR "
+            android:text="Sign Up"
+            android:textAllCaps="false"
             android:textColor="#000000"
             android:textStyle="bold" />
 

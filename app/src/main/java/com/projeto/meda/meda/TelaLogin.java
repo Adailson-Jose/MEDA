@@ -27,7 +27,7 @@ public class TelaLogin extends AppCompatActivity {
         btLogar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ReadPessoa buscar = new ReadPessoa(getApplicationContext());
+                PessoaDao buscar = new PessoaDao(getApplicationContext());
                 ViewGroup group = (ViewGroup) findViewById(R.id.raizLogin);
                 String cpfString = editUsuario.getText().toString();
                 String senhaStr = editSenha.getText().toString();
@@ -54,12 +54,12 @@ public class TelaLogin extends AppCompatActivity {
                         Intent abreTelaInicialUsuarioComum = new Intent(TelaLogin.this, TelaInicialUsuarioComum.class);
                         abreTelaInicialUsuarioComum.putExtra("KEY", String.valueOf(pessoa.getCpf()));
                         startActivity(abreTelaInicialUsuarioComum);
-                        Toast.makeText(TelaLogin.this, R.string.loginUseComum, Toast.LENGTH_SHORT).show();
+                        Toast.makeText(TelaLogin.this, "Login ", Toast.LENGTH_SHORT).show();
                     } else {
-                        Toast.makeText(TelaLogin.this, R.string.CamposInvalidos, Toast.LENGTH_LONG).show();
+                        Toast.makeText(TelaLogin.this, "Campos inválidos", Toast.LENGTH_LONG).show();
                     }
                 } else {
-                    Toast.makeText(TelaLogin.this, R.string.FaltaPreenchimento, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(TelaLogin.this, "Falta campos serem preenchidos.", Toast.LENGTH_SHORT).show();
                 }
             }
         });

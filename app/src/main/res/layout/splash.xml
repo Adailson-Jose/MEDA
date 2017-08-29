@@ -7,16 +7,16 @@
 
     <TextView
         android:id="@+id/textView4"
-        android:background="@color/colorPrimary"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentStart="true"
-        android:text="                                                                 consciência alimentar"
+        android:background="@color/colorPrimary"
+        android:text="                                                                Food awareness,"
         android:textAlignment="center"
-        android:textAllCaps="true"
+        android:textAllCaps="false"
         android:textSize="24sp"
         android:textStyle="bold" />
 
@@ -30,16 +30,16 @@
 
     <TextView
         android:id="@+id/textView5"
-        android:background="@color/colorPrimary"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_marginBottom="38dp"
-        android:text="                                                                                 precisamos ter."
+        android:background="@color/colorPrimary"
+        android:text="                                                                                 we must have."
         android:textAlignment="center"
-        android:textAllCaps="true"
+        android:textAllCaps="false"
         android:textSize="24sp"
         android:textStyle="bold" />
 </RelativeLayout>
