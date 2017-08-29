@@ -40,7 +40,7 @@ public class TelaInicialUsuarioComum extends Activity {
         btMinhaInformacao.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent AbreTelaInformacaoUsuario = new Intent(TelaInicialUsuarioComum.this, TelaEditaInfoUsuario.class);
+                Intent AbreTelaInformacaoUsuario = new Intent(TelaInicialUsuarioComum.this, TelaInformacaoUsuario.class);
                 AbreTelaInformacaoUsuario.putExtra("pessoa", String.valueOf(pessoa.getCpf()));
                 startActivity(AbreTelaInformacaoUsuario);
             }
