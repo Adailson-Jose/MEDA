@@ -59,7 +59,8 @@
             android:textAllCaps="false"
             android:textColor="@color/colorPrimaryDark"
             android:textSize="14sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:layout_weight="7.22" />
 
         <Button
             android:id="@+id/btSobre"
@@ -68,15 +69,17 @@
             android:text="About"
             android:textAllCaps="false"
             android:textColor="@color/colorPrimaryDark"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:layout_weight="3.61" />
 
         <Button
-            android:id="@+id/button5"
+            android:id="@+id/btSair"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Exit"
             android:textColor="@color/colorPrimaryDark"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:layout_weight="7.83" />
 
     </LinearLayout>
 </ScrollView>

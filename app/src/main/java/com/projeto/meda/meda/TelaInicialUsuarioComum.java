@@ -10,7 +10,7 @@ import android.widget.TextView;
 
 public class TelaInicialUsuarioComum extends Activity {
     TextView textViewBemVindo;
-    Button btMinhaInformacao, btSugestao, btPrevisaoProducao, btInformacaoClimatica, btSobre;
+    Button btMinhaInformacao, btSugestao, btPrevisaoProducao, btInformacaoClimatica, btSobre, btSair;
     WebView webView;
     Pessoa pessoa;
 
@@ -23,6 +23,7 @@ public class TelaInicialUsuarioComum extends Activity {
         btPrevisaoProducao = (Button) findViewById(R.id.btPrevisaoProducao);
         btInformacaoClimatica = (Button) findViewById(R.id.btInformacaoClimatica);
         btSobre = (Button) findViewById(R.id.btSobre);
+        btSair = (Button) findViewById(R.id.btSair);
         textViewBemVindo = (TextView) findViewById(R.id.textViewBemVindo);
 
         /*WebView webView = (WebView) findViewById(R.id.webView01);
@@ -57,5 +58,22 @@ public class TelaInicialUsuarioComum extends Activity {
                 startActivity(abreTelaSobre);
             }
         });
+        btSair.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent abreTelaLogin = new Intent(TelaInicialUsuarioComum.this, TelaLogin.class);
+                abreTelaLogin.putExtra("pessoa", String.valueOf(pessoa.getCpf()));
+                startActivity(abreTelaLogin);
+            }
+        });
+    }
+
+    public void onBackPressed() {
+        Intent intent = new Intent();
+        intent.setAction(Intent.ACTION_MAIN);
+        intent.addCategory(Intent.CATEGORY_HOME);
+        startActivity(intent);
+
+        return;
     }
 }
