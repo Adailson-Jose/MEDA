@@ -20,23 +20,35 @@
             android:textAlignment="center"
             android:textAllCaps="true"
             android:textSize="20sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:layout_weight="30.78" />
 
-        <TextView
-            android:id="@+id/textView6"
+        <Button
+            android:id="@+id/btPrevisaoProducao"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="20.80"
-            android:text="Dicas para evitar desperdício."
-            android:textAlignment="center"
-            android:textSize="20sp"
+            android:text=" Production Forecast"
+            android:textAllCaps="false"
+            android:textColor="@color/colorPrimaryDark"
             android:textStyle="bold" />
 
-        <WebView
-            android:id="@+id/webView01"
+        <Button
+            android:id="@+id/btSugestao"
             android:layout_width="match_parent"
-            android:layout_height="411dp"
-            android:layout_weight="0.99" />
+            android:layout_height="wrap_content"
+            android:text="Suggested Food "
+            android:textAllCaps="false"
+            android:textColor="@color/colorPrimaryDark"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btInformacaoClimatica"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Climatic Info"
+            android:textAllCaps="false"
+            android:textColor="@color/colorPrimaryDark"
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/btMinhaInformacao"
@@ -44,8 +56,26 @@
             android:layout_height="wrap_content"
             android:text="My Info"
             android:textAlignment="center"
-            android:textColor="#000000"
+            android:textAllCaps="false"
+            android:textColor="@color/colorPrimaryDark"
             android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btSobre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="About"
+            android:textAllCaps="false"
+            android:textColor="@color/colorPrimaryDark"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Exit"
+            android:textColor="@color/colorPrimaryDark"
             android:textStyle="bold" />
 
     </LinearLayout>

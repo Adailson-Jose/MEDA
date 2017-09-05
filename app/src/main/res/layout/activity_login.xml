@@ -55,7 +55,7 @@
             android:layout_gravity="center"
             android:text="Login"
             android:textAllCaps="false"
-            android:textColor="#000000"
+            android:textColor="@color/colorPrimaryDark"
             android:textStyle="bold" />
 
         <Button
@@ -64,7 +64,7 @@
             android:layout_height="wrap_content"
             android:text="Password Recover"
             android:textAllCaps="false"
-            android:textColor="#000000"
+            android:textColor="@color/colorPrimaryDark"
             android:textStyle="bold" />
 
         <Button
@@ -73,7 +73,7 @@
             android:layout_height="match_parent"
             android:text="Sign Up"
             android:textAllCaps="false"
-            android:textColor="#000000"
+            android:textColor="@color/colorPrimaryDark"
             android:textStyle="bold" />
 
         <ImageView

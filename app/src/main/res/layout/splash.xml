@@ -14,7 +14,7 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentStart="true"
         android:background="@color/colorPrimary"
-        android:text="                                                                Food awareness,"
+        android:text="                                                                              Food awareness,"
         android:textAlignment="center"
         android:textAllCaps="false"
         android:textSize="24sp"

@@ -11,7 +11,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
         <activity
             android:name=".SplashScreen"
             android:label="MEDA">
@@ -21,7 +20,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".TelaLogin"
             android:label="MEDA">
@@ -31,12 +29,12 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-
-        <activity android:name="TelaRecuperarSenha" />
-        <activity android:name="TelaCadastrarUsuario" />
-        <activity android:name="TelaInicialUsuarioComum" />
-        <activity android:name="TelaInformacaoUsuario" />
-        <activity android:name="TelaEditaInfoUsuario"></activity>
+        <activity android:name=".TelaRecuperarSenha" />
+        <activity android:name=".TelaCadastrarUsuario" />
+        <activity android:name=".TelaInicialUsuarioComum" />
+        <activity android:name=".TelaInformacaoUsuario" />
+        <activity android:name=".TelaEditaInfoUsuario" />
+        <activity android:name=".TelaSobre"></activity>
     </application>
-</manifest>
 
+</manifest>
