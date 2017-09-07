@@ -28,13 +28,12 @@
             android:layout_marginTop="4dp"
             android:layout_weight="0.07"
             android:fontFamily="serif"
-            android:text="RECUPERAÇAO DE SENHA"
+            android:text="Password recovery"
             android:textAlignment="center"
-            android:textAllCaps="true"
+            android:textAllCaps="false"
             android:textSize="20dp"
             android:textStyle="bold"
-            tools:layout_weight="0.06"
-            tools:text="RECUPERAÇAO DE SENHA" />
+            tools:layout_weight="0.06" />
 
 
         <EditText
@@ -71,6 +70,7 @@
             android:text="Change Password"
             android:textAllCaps="false"
             android:textColor="@color/colorPrimaryDark"
+            android:textSize="18sp"
             android:textStyle="bold" />
 
         <Button
@@ -81,6 +81,7 @@
             android:text="Cancel Change"
             android:textAllCaps="false"
             android:textColor="@color/colorPrimaryDark"
+            android:textSize="18sp"
             android:textStyle="bold" />
 
     </LinearLayout>

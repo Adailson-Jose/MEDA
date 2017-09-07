@@ -23,7 +23,7 @@ public class TelaInformacaoUsuario extends AppCompatActivity {
         Bundle bundle = getIntent().getExtras();
         if (bundle != null) {
             pessoa = busca.getPessoa(Long.parseLong(String.valueOf(bundle.get("pessoa"))));
-            textViewMinhasInformacoes.setText("Name: " + pessoa.getNome() + "\n" + "Email: " + pessoa.getEmail() + "\n" + "Senha: " + pessoa.getSenha() + "\n" + "Cpf: " + pessoa.getCpf());
+            textViewMinhasInformacoes.setText("Name: " + pessoa.getNome() + "\n" + "Email: " + pessoa.getEmail() + "\n" + "Password: " + pessoa.getSenha() + "\n" + "Cpf: " + pessoa.getCpf());
         }
         btEditaMinhasInformacoes.setOnClickListener(new View.OnClickListener() {
             @Override

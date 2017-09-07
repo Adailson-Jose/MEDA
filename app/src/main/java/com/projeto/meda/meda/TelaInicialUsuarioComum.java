@@ -66,6 +66,30 @@ public class TelaInicialUsuarioComum extends Activity {
                 startActivity(abreTelaLogin);
             }
         });
+        btInformacaoClimatica.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent abreTelaInformacaoClima = new Intent(TelaInicialUsuarioComum.this, TelaInformacaoClima.class);
+                abreTelaInformacaoClima.putExtra("pessoa", String.valueOf(pessoa.getCpf()));
+                startActivity(abreTelaInformacaoClima);
+            }
+        });
+        btSugestao.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent abreTelaInformacaoClima = new Intent(TelaInicialUsuarioComum.this, TelaInfoAlimento.class);
+                abreTelaInformacaoClima.putExtra("pessoa", String.valueOf(pessoa.getCpf()));
+                startActivity(abreTelaInformacaoClima);
+            }
+        });
+        btPrevisaoProducao.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent abreTelaSugestao = new Intent(TelaInicialUsuarioComum.this, TelaSugestao.class);
+                abreTelaSugestao.putExtra("pessoa", String.valueOf(pessoa.getCpf()));
+                startActivity(abreTelaSugestao);
+            }
+        });
     }
 
     public void onBackPressed() {

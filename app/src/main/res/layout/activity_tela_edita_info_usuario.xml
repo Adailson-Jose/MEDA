@@ -14,12 +14,23 @@
         tools:layout_editor_absoluteX="8dp"
         tools:layout_editor_absoluteY="8dp">
 
+        <TextView
+            android:id="@+id/textView19"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="Edição de dados"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
         <EditText
             android:id="@+id/editTextNome"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="textPersonName" />
+            android:inputType="textPersonName"
+            android:textSize="18sp" />
 
         <EditText
             android:id="@+id/editTextEmail"
@@ -35,6 +46,7 @@
             android:text="Save  Edition"
             android:textAllCaps="false"
             android:textColor="@color/colorPrimaryDark"
+            android:textSize="18sp"
             android:textStyle="bold" />
 
     </LinearLayout>

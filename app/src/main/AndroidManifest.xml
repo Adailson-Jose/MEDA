@@ -34,7 +34,11 @@
         <activity android:name=".TelaInicialUsuarioComum" />
         <activity android:name=".TelaInformacaoUsuario" />
         <activity android:name=".TelaEditaInfoUsuario" />
-        <activity android:name=".TelaSobre"></activity>
+        <activity android:name=".TelaSobre" />
+        <activity android:name=".TelaInformacaoClima" />
+        <activity android:name=".TelaInfoAlimento" />
+        <activity android:name=".TelaSugestao" />
+        <activity android:name=".CalculoSugestao"></activity>
     </application>
 
 </manifest>

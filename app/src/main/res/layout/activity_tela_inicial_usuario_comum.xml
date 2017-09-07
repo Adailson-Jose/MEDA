@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/raizTelaUserFuncao"
+    style="@style/Base.TextAppearance.AppCompat.Widget.Switch"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#dddddd">
@@ -17,11 +18,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
+            android:layout_weight="30.78"
             android:textAlignment="center"
             android:textAllCaps="true"
             android:textSize="20sp"
-            android:textStyle="bold"
-            android:layout_weight="30.78" />
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/btPrevisaoProducao"
@@ -30,15 +31,17 @@
             android:text=" Production Forecast"
             android:textAllCaps="false"
             android:textColor="@color/colorPrimaryDark"
+            android:textSize="18sp"
             android:textStyle="bold" />
 
         <Button
             android:id="@+id/btSugestao"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Suggested Food "
+            android:text="Food Info"
             android:textAllCaps="false"
             android:textColor="@color/colorPrimaryDark"
+            android:textSize="18sp"
             android:textStyle="bold" />
 
         <Button
@@ -48,38 +51,42 @@
             android:text="Climatic Info"
             android:textAllCaps="false"
             android:textColor="@color/colorPrimaryDark"
+            android:textSize="18sp"
             android:textStyle="bold" />
 
         <Button
             android:id="@+id/btMinhaInformacao"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_weight="7.22"
             android:text="My Info"
             android:textAlignment="center"
             android:textAllCaps="false"
             android:textColor="@color/colorPrimaryDark"
-            android:textSize="14sp"
-            android:textStyle="bold"
-            android:layout_weight="7.22" />
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/btSobre"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_weight="3.61"
             android:text="About"
             android:textAllCaps="false"
             android:textColor="@color/colorPrimaryDark"
-            android:textStyle="bold"
-            android:layout_weight="3.61" />
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/btSair"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_weight="7.83"
             android:text="Exit"
+            android:textAllCaps="false"
             android:textColor="@color/colorPrimaryDark"
-            android:textStyle="bold"
-            android:layout_weight="7.83" />
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
     </LinearLayout>
 </ScrollView>
