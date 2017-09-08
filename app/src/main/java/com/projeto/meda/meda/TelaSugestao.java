@@ -8,7 +8,10 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.Spinner;
+
+import java.util.ArrayList;
 
 import static com.projeto.meda.meda.EnumCultura.listaEnumCultura;
 import static com.projeto.meda.meda.EnumQualidadeClima.listaEnumClima;
@@ -19,6 +22,9 @@ public class TelaSugestao extends AppCompatActivity {
     private String dadosPessoa;
     Button btSair, btSugestao;
     EditText qtdTonelada;
+    ProgressBar bar;
+    private static final int TIME = 6000;
+    private boolean ativo;
     private Spinner spinner1, spinner2, spinner3, spinner4;
     private String[] listaEnumRegiao = listaEnumRegiao();
     private String[] listaEnumMercado = listaEnumMercado();
@@ -32,6 +38,7 @@ public class TelaSugestao extends AppCompatActivity {
         btSair = (Button) findViewById(R.id.btSair);
         qtdTonelada = (EditText) findViewById(R.id.qtdTonelada);
         btSugestao = (Button) findViewById(R.id.btSugestao);
+        bar = (ProgressBar) findViewById(R.id.bar);
         Bundle bundle = getIntent().getExtras();
         if (bundle != null) {
             dadosPessoa = String.valueOf(bundle.get("pessoa"));
@@ -102,10 +109,6 @@ public class TelaSugestao extends AppCompatActivity {
             }
         });
 
-        //String regiao = (String) spinner1.getSelectedItem();
-        //String mercado = (String) spinner2.getSelectedItem();
-        //String clima = (String) spinner3.getSelectedItem();
-        //String cultura = (String) spinner4.getSelectedItem();
         String teste = String.valueOf(qtdTonelada);
         if (ValidarCampoVazio.isCampoVazio(teste)) {
             qtdTonelada.setError("Field invalid ton!");
@@ -120,22 +123,51 @@ public class TelaSugestao extends AppCompatActivity {
                     qtdTonelada.setError("Field invalid ton!");
                     qtdTonelada.requestFocus();
                 } else {
-                    Intent abreCalculoSugestao = new Intent(TelaSugestao.this, CalculoSugestao.class);
-                    abreCalculoSugestao.putExtra("pessoa", dadosPessoa);
-                    startActivity(abreCalculoSugestao);
+                    Thread timeTread = new Thread() {
+                        @Override
+                        public void run() {
+                            ativo = true;
+                            try {
+                                int temp = 0;
+                                while (ativo && (temp < TIME)) {
+                                    sleep(100);
+                                    if (ativo) {
+                                        temp += 100;
+                                        updateProgress(temp);
+                                    }
+                                }
+                            } catch (InterruptedException e) {
+                                e.printStackTrace();
+                            } finally {
+                                String regiao = (String) spinner1.getSelectedItem();
+                                String mercado = (String) spinner2.getSelectedItem();
+                                String clima = (String) spinner3.getSelectedItem();
+                                String cultura = (String) spinner4.getSelectedItem();
+                                ArrayList<String> dados = new ArrayList<String>();
+                                dados.add(regiao);
+                                dados.add(mercado);
+                                dados.add(clima);
+                                dados.add(cultura);
+                                Intent abreCalculoSugestao = new Intent(TelaSugestao.this, CalculoSugestao.class);
+                                abreCalculoSugestao.putExtra("pessoa", dadosPessoa);
+                                abreCalculoSugestao.putExtra("dados", dados);
+                                startActivity(abreCalculoSugestao);
+                            }
+                        }
+                    };
+                    timeTread.start();
                 }
             }
         });
-        btSair.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent abreTelaInicialUsuarioComum = new Intent(TelaSugestao.this, TelaInicialUsuarioComum.class);
-                abreTelaInicialUsuarioComum.putExtra("pessoa", dadosPessoa);
-                startActivity(abreTelaInicialUsuarioComum);
-            }
-        });
+
     }
 
+    public void updateProgress(final int time) {
+        if (bar != null) {
+            final int progress = bar.getMax() * time / TIME;
+            bar.setProgress(progress);
+        }
+    }
     public void onBackPressed() {
         Intent intent = new Intent();
         intent.setAction(Intent.ACTION_MAIN);

@@ -14,6 +14,25 @@
         android:textStyle="bold" />
 
 
+        <TextView
+            android:id="@+id/textView20"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:text="Suggestion"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/sugestaoTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:textAlignment="textStart"
+            android:textColor="@android:color/background_dark"
+            android:textStyle="bold" />
+
         <Button
             android:id="@+id/btSair"
             android:layout_width="match_parent"
