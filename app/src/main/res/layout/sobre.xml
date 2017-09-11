@@ -48,7 +48,7 @@
             android:id="@+id/textView7"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Dispor de informações suficientemente boas, para alertar produtores rurais quando e por que produzir tal cultura em sua região. E aos usuários comuns informá-los sobre quais alimentos num determinado período será mais aconselhado comprar e/ou vender. "
+            android:text="Have enough good information to alert rural producers when and why to produce such a crop in their region. And to ordinary users inform them about which foods in a given period will be most advised to buy and / or sell. "
             android:textAlignment="textStart"
             android:textSize="15sp"
             tools:ignore="RtlCompat" />
@@ -67,7 +67,7 @@
             android:id="@+id/textView9"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Funciono através de dados do(ar e solo) coletados pelas estações de monitoramento e satélites, faço predições baseada nos dados colhidos através de algoritmos de recomendações que serão aperfeiçoados até 2030 para melhor predizer as escolhas de produzir uma cultura  ou não. Também essa predição será feita baseada na propensão  dos usuários a consumir um dado alimento naquele período." />
+            android:text="I use data from the (air and soil) collected by the monitoring stations and satellites, I make predictions based on the data collected through algorithms of recommendations that will be improved until 2030 to better predict the choices of producing a crop or not. Also this prediction will be made based on the propensity of the users to consume a given food in that period. " />
 
         <Button
             android:id="@+id/btSair"

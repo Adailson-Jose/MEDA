@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 import static com.projeto.meda.meda.EnumCultura.listaEnumCultura;
 
@@ -38,245 +39,245 @@ public class CalculoSugestao extends AppCompatActivity {
                 startActivity(abreTelaInicialUsuarioComum);
             }
         });
-        if (dados.get(0) == "Pernambuco") {
-            if (dados.get(1) == "Ruim") {
+        if (dados.get(0).equals("Pernambuco")) {
+            if (Objects.equals(dados.get(1), "Ruim")) {
 
-                if (dados.get(2) == "Ruim") {
-                    sugestaoTxt.setText("Local: " + dados.get(0) + "\n" + "Segundo as previsões do algoritmo o mercado não está nada FAVORÁVEL, nem o clima, portanto não é aconselhávél fazer plantações devido o clima e o mercado que trazem grandes riscos.");
-                } else if (dados.get(2) == "Médio") {
-                    sugestaoTxt.setText("Local: " + dados.get(0) + "\n" + "Segundo as previsões do algoritmo o mercado não está nada FAVORÁVEL, nem o clima, portanto não é aconselhávél fazer plantações devido o clima e o mercado que trazem grandes riscos.");
+                if (Objects.equals(dados.get(2), "Ruim")) {
+                    sugestaoTxt.setText("Local: " + dados.get(0) + "\n" + "Segundo as previsões do algoritmo o mercado não está nada FAVORÁVEL, nem o clima, portanto não é aconselhável fazer plantação devido o clima e o mercado que trazem grandes riscos.");
+                } else if (Objects.equals(dados.get(2), "Médio")) {
+                    sugestaoTxt.setText("Local: " + dados.get(0) + "\n" + "Segundo as previsões do algoritmo o mercado não está nada FAVORÁVEL, nem o clima, portanto não é aconselhável fazer plantação devido o clima e o mercado que trazem grandes riscos.");
 
-                } else if (dados.get(2) == "Bom") {
-                    sugestaoTxt.setText("Local: " + dados.get(0) + "\n" + "Segundo as previsões do algoritmo o mercado não está nada FAVORÁVEL, mas o clima está,  portanto  é aconselhávél fazer plantações EM MÉDIA ESCALA para a cultura: " + dados.get(3) + " caso deseje estocar para vender posteriormente.");
+                } else if (Objects.equals(dados.get(2), "Bom")) {
+                    sugestaoTxt.setText("Local: " + dados.get(0) + "\n" + "Segundo as previsões do algoritmo o mercado não está nada FAVORÁVEL, mas o clima está,  portanto  é aconselhável fazer plantação EM MÉDIA ESCALA para a cultura: " + dados.get(3) + " caso deseje estocar para vender posteriormente.");
 
-                } else if (dados.get(2) == "Ótimo") {
-                    sugestaoTxt.setText("Local: " + dados.get(0) + "\n" + "Segundo as previsões do algoritmo o mercado não está nada FAVORÁVEL, mas clima não está, portanto  é aconselhávél fazer plantações EM MÉDIA ESCALA: " + dados.get(3) + " caso deseje estocar para vender posteriormente.");
+                } else if (Objects.equals(dados.get(2), "Ótimo")) {
+                    sugestaoTxt.setText("Local: " + dados.get(0) + "\n" + "Segundo as previsões do algoritmo o mercado não está nada FAVORÁVEL, mas clima não está, portanto  é aconselhável fazer plantação EM MÉDIA ESCALA: " + dados.get(3) + " caso deseje estocar para vender posteriormente.");
                 }
 
-            } else if (dados.get(1) == "Médio") {
+            } else if (Objects.equals(dados.get(1), "Médio")) {
 
-                if (dados.get(2) == "Ruim") {
-                    sugestaoTxt.setText("Local: " + dados.get(0) + "\n" + "Segundo as previsões do algoritmo o mercado  está pouco FAVORÁVEL e o clima não ajuda, portanto não é aconselhávél fazer plantações devido o clima e o mercado que trazem grandes riscos.");
-                } else if (dados.get(2) == "Médio") {
-                    sugestaoTxt.setText("Local: " + dados.get(0) + "\n" + "Segundo as previsões do algoritmo o mercado  está pouco FAVORÁVEL e o clima não ajuda, portanto não é aconselhávél fazer plantações devido o clima e o mercado que trazem grandes riscos.");
+                if (Objects.equals(dados.get(2), "Ruim")) {
+                    sugestaoTxt.setText("Local: " + dados.get(0) + "\n" + "Segundo as previsões do algoritmo o mercado  está pouco FAVORÁVEL e o clima não ajuda, portanto não é aconselhável fazer plantação devido o clima e o mercado que trazem grandes riscos.");
+                } else if (Objects.equals(dados.get(2), "Médio")) {
+                    sugestaoTxt.setText("Local: " + dados.get(0) + "\n" + "Segundo as previsões do algoritmo o mercado  está pouco FAVORÁVEL e o clima não ajuda, portanto não é aconselhável fazer plantação devido o clima e o mercado que trazem grandes riscos.");
 
-                } else if (dados.get(2) == "Bom") {
-                    sugestaoTxt.setText("Local: " + dados.get(0) + "\n" + "Segundo as previsões do algoritmo o mercado  está pouco FAVORÁVEL , mas o clima está bom,  portanto  é aconselhávél fazer plantações EM MÉDIA ESCALA para a cultura: " + dados.get(3) + " caso deseje estocar para vender posteriormente.");
+                } else if (Objects.equals(dados.get(2), "Bom")) {
+                    sugestaoTxt.setText("Local: " + dados.get(0) + "\n" + "Segundo as previsões do algoritmo o mercado  está pouco FAVORÁVEL , mas o clima está bom,  portanto  é aconselhável fazer plantação EM MÉDIA ESCALA para a cultura: " + dados.get(3) + " caso deseje estocar para vender posteriormente.");
 
-                } else if (dados.get(2) == "Ótimo") {
-                    sugestaoTxt.setText("Local: " + dados.get(0) + "\n" + "Segundo as previsões do algoritmo o mercado  está pouco FAVORÁVEL, mas clima está ótimo, portanto  é aconselhávél fazer plantações EM MÉDIA ESCALA para a cultura: " + dados.get(3) + " caso deseje estocar para vender posteriormente.");
+                } else if (Objects.equals(dados.get(2), "Ótimo")) {
+                    sugestaoTxt.setText("Local: " + dados.get(0) + "\n" + "Segundo as previsões do algoritmo o mercado  está pouco FAVORÁVEL, mas clima está ótimo, portanto  é aconselhável fazer plantação EM MÉDIA ESCALA para a cultura: " + dados.get(3) + " caso deseje estocar para vender posteriormente.");
                 }
 
-            } else if (dados.get(1) == "Bom") {
+            } else if (Objects.equals(dados.get(1), "Bom")) {
 
-                if (dados.get(2) == "Ruim") {
-                    sugestaoTxt.setText("Local: " + dados.get(0) + "\n" + "Segundo as previsões do algoritmo o mercado  está bem FAVORÁVEL, mas o clima não ajuda, portanto não é aconselhávél fazer plantações devido o clima que traz grandes riscos.");
+                if (Objects.equals(dados.get(2), "Ruim")) {
+                    sugestaoTxt.setText("Local: " + dados.get(0) + "\n" + "Segundo as previsões do algoritmo o mercado  está bem FAVORÁVEL, mas o clima não ajuda, portanto não é aconselhável fazer plantação devido o clima que traz grandes riscos.");
 
-                } else if (dados.get(2) == "Médio") {
-                    sugestaoTxt.setText("Local: " + dados.get(0) + "\n" + "Segundo as previsões do algoritmo o mercado  está bem  FAVORÁVEL, mas o clima não ajuda, portanto não é aconselhávél fazer plantações devido o clima que traz grandes riscos.");
+                } else if (Objects.equals(dados.get(2), "Médio")) {
+                    sugestaoTxt.setText("Local: " + dados.get(0) + "\n" + "Segundo as previsões do algoritmo o mercado  está bem  FAVORÁVEL, mas o clima não ajuda, portanto não é aconselhável fazer plantação devido o clima que traz grandes riscos.");
 
-                } else if (dados.get(2) == "Bom") {
-                    sugestaoTxt.setText("Local: " + dados.get(0) + "\n" + "Segundo as previsões do algoritmo o mercado  está bem FAVORÁVEL e o clima está bom,  portanto  é aconselhávél fazer plantações EM MÉDIA ESCALA para a cultura: " + dados.get(3) + ".");
+                } else if (Objects.equals(dados.get(2), "Bom")) {
+                    sugestaoTxt.setText("Local: " + dados.get(0) + "\n" + "Segundo as previsões do algoritmo o mercado  está bem FAVORÁVEL e o clima está bom,  portanto  é aconselhável fazer plantação EM MÉDIA ESCALA para a cultura: " + dados.get(3) + ".");
 
-                } else if (dados.get(2) == "Ótimo") {
-                    sugestaoTxt.setText("Local: " + dados.get(0) + "\n" + "Segundo as previsões do algoritmo o mercado  está bem FAVORÁVEL e oclima está ótimo, portanto  é aconselhávél fazer plantações EM GRANDE ESCALA para a cultura: " + dados.get(3) + ".");
+                } else if (Objects.equals(dados.get(2), "Ótimo")) {
+                    sugestaoTxt.setText("Local: " + dados.get(0) + "\n" + "Segundo as previsões do algoritmo o mercado  está bem FAVORÁVEL e oclima está ótimo, portanto  é aconselhável fazer plantação EM GRANDE ESCALA para a cultura: " + dados.get(3) + ".");
                 }
 
-            } else if (dados.get(1) == "Ótimo") {
+            } else if (Objects.equals(dados.get(1), "Ótimo")) {
 
-                if (dados.get(2) == "Ruim") {
-                    sugestaoTxt.setText("Local: " + dados.get(0) + "\n" + "Segundo as previsões do algoritmo o mercado  está muito FAVORÁVEL, mas o clima não ajuda, portanto não é aconselhávél fazer plantações devido o clima que traz grandes riscos.");
+                if (Objects.equals(dados.get(2), "Ruim")) {
+                    sugestaoTxt.setText("Local: " + dados.get(0) + "\n" + "Segundo as previsões do algoritmo o mercado  está muito FAVORÁVEL, mas o clima não ajuda, portanto não é aconselhável fazer plantação devido o clima que traz grandes riscos.");
 
-                } else if (dados.get(2) == "Médio") {
-                    sugestaoTxt.setText("Local: " + dados.get(0) + "\n" + "Segundo as previsões do algoritmo o mercado  está muito  FAVORÁVEL, mas o clima não ajuda, portanto não é aconselhávél fazer plantações devido o clima que traz riscos.");
+                } else if (Objects.equals(dados.get(2), "Médio")) {
+                    sugestaoTxt.setText("Local: " + dados.get(0) + "\n" + "Segundo as previsões do algoritmo o mercado  está muito  FAVORÁVEL, mas o clima não ajuda, portanto não é aconselhável fazer plantação devido o clima que traz riscos.");
 
-                } else if (dados.get(2) == "Bom") {
-                    sugestaoTxt.setText("Local: " + dados.get(0) + "\n" + "Segundo as previsões do algoritmo o mercado  está muito FAVORÁVEL e o clima está bom,  portanto  é aconselhávél fazer plantações EM MÉDIA ESCALA para a cultura: " + dados.get(3) + ".");
+                } else if (Objects.equals(dados.get(2), "Bom")) {
+                    sugestaoTxt.setText("Local: " + dados.get(0) + "\n" + "Segundo as previsões do algoritmo o mercado  está muito FAVORÁVEL e o clima está bom,  portanto  é aconselhável fazer plantação EM MÉDIA ESCALA para a cultura: " + dados.get(3) + ".");
 
-                } else if (dados.get(2) == "Ótimo") {
-                    sugestaoTxt.setText("Local: " + dados.get(0) + "\n" + "Segundo as previsões do algoritmo o mercado  está muito FAVORÁVEL e oclima está ótimo, portanto  é aconselhávél fazer plantações EM GRANDE ESCALA para a cultura: " + dados.get(3) + ".");
-                }
-            }
-        } else if (dados.get(0) == "São Paulo") {
-            if (dados.get(1) == "Ruim") {
-
-                if (dados.get(2) == "Ruim") {
-                    sugestaoTxt.setText("Local: " + dados.get(0) + "\n" + "Segundo as previsões do algoritmo o mercado não está nada FAVORÁVEL, nem o clima, portanto não é aconselhávél fazer plantações devido o clima e o mercado que trazem grandes riscos.");
-                } else if (dados.get(2) == "Médio") {
-                    sugestaoTxt.setText("Local: " + dados.get(0) + "\n" + "Segundo as previsões do algoritmo o mercado não está nada FAVORÁVEL, nem o clima, portanto não é aconselhávél fazer plantações devido o clima e o mercado que trazem grandes riscos.");
-
-                } else if (dados.get(2) == "Bom") {
-                    sugestaoTxt.setText("Local: " + dados.get(0) + "\n" + "Segundo as previsões do algoritmo o mercado não está nada FAVORÁVEL, mas o clima está,  portanto  é aconselhávél fazer plantações EM MÉDIA ESCALA para a cultura: " + dados.get(3) + " caso deseje estocar para vender posteriormente.");
-
-                } else if (dados.get(2) == "Ótimo") {
-                    sugestaoTxt.setText("Local: " + dados.get(0) + "\n" + "Segundo as previsões do algoritmo o mercado não está nada FAVORÁVEL, mas clima não está, portanto  é aconselhávél fazer plantações EM MÉDIA ESCALA: " + dados.get(3) + " caso deseje estocar para vender posteriormente.");
-                }
-
-            } else if (dados.get(1) == "Médio") {
-
-                if (dados.get(2) == "Ruim") {
-                    sugestaoTxt.setText("Local: " + dados.get(0) + "\n" + "Segundo as previsões do algoritmo o mercado  está pouco FAVORÁVEL e o clima não ajuda, portanto não é aconselhávél fazer plantações devido o clima e o mercado que trazem grandes riscos.");
-                } else if (dados.get(2) == "Médio") {
-                    sugestaoTxt.setText("Local: " + dados.get(0) + "\n" + "Segundo as previsões do algoritmo o mercado  está pouco FAVORÁVEL e o clima não ajuda, portanto não é aconselhávél fazer plantações devido o clima e o mercado que trazem grandes riscos.");
-
-                } else if (dados.get(2) == "Bom") {
-                    sugestaoTxt.setText("Local: " + dados.get(0) + "\n" + "Segundo as previsões do algoritmo o mercado  está pouco FAVORÁVEL , mas o clima está bom,  portanto  é aconselhávél fazer plantações EM MÉDIA ESCALA para a cultura: " + dados.get(3) + " caso deseje estocar para vender posteriormente.");
-
-                } else if (dados.get(2) == "Ótimo") {
-                    sugestaoTxt.setText("Local: " + dados.get(0) + "\n" + "Segundo as previsões do algoritmo o mercado  está pouco FAVORÁVEL, mas clima está ótimo, portanto  é aconselhávél fazer plantações EM MÉDIA ESCALA para a cultura: " + dados.get(3) + " caso deseje estocar para vender posteriormente.");
-                }
-
-            } else if (dados.get(1) == "Bom") {
-
-                if (dados.get(2) == "Ruim") {
-                    sugestaoTxt.setText("Local: " + dados.get(0) + "\n" + "Segundo as previsões do algoritmo o mercado  está bem FAVORÁVEL, mas o clima não ajuda, portanto não é aconselhávél fazer plantações devido o clima que traz grandes riscos.");
-
-                } else if (dados.get(2) == "Médio") {
-                    sugestaoTxt.setText("Local: " + dados.get(0) + "\n" + "Segundo as previsões do algoritmo o mercado  está bem  FAVORÁVEL, mas o clima não ajuda, portanto não é aconselhávél fazer plantações devido o clima que traz grandes riscos.");
-
-                } else if (dados.get(2) == "Bom") {
-                    sugestaoTxt.setText("Local: " + dados.get(0) + "\n" + "Segundo as previsões do algoritmo o mercado  está bem FAVORÁVEL e o clima está bom,  portanto  é aconselhávél fazer plantações EM MÉDIA ESCALA para a cultura: " + dados.get(3) + ".");
-
-                } else if (dados.get(2) == "Ótimo") {
-                    sugestaoTxt.setText("Local: " + dados.get(0) + "\n" + "Segundo as previsões do algoritmo o mercado  está bem FAVORÁVEL e oclima está ótimo, portanto  é aconselhávél fazer plantações EM GRANDE ESCALA para a cultura: " + dados.get(3) + ".");
-                }
-
-            } else if (dados.get(1) == "Ótimo") {
-
-                if (dados.get(2) == "Ruim") {
-                    sugestaoTxt.setText("Local: " + dados.get(0) + "\n" + "Segundo as previsões do algoritmo o mercado  está muito FAVORÁVEL, mas o clima não ajuda, portanto não é aconselhávél fazer plantações devido o clima que traz grandes riscos.");
-
-                } else if (dados.get(2) == "Médio") {
-                    sugestaoTxt.setText("Local: " + dados.get(0) + "\n" + "Segundo as previsões do algoritmo o mercado  está muito  FAVORÁVEL, mas o clima não ajuda, portanto não é aconselhávél fazer plantações devido o clima que traz riscos.");
-
-                } else if (dados.get(2) == "Bom") {
-                    sugestaoTxt.setText("Local: " + dados.get(0) + "\n" + "Segundo as previsões do algoritmo o mercado  está muito FAVORÁVEL e o clima está bom,  portanto  é aconselhávél fazer plantações EM MÉDIA ESCALA para a cultura: " + dados.get(3) + ".");
-
-                } else if (dados.get(2) == "Ótimo") {
-                    sugestaoTxt.setText("Local: " + dados.get(0) + "\n" + "Segundo as previsões do algoritmo o mercado  está muito FAVORÁVEL e oclima está ótimo, portanto  é aconselhávél fazer plantações EM GRANDE ESCALA para a cultura: " + dados.get(3) + ".");
+                } else if (Objects.equals(dados.get(2), "Ótimo")) {
+                    sugestaoTxt.setText("Local: " + dados.get(0) + "\n" + "Segundo as previsões do algoritmo o mercado  está muito FAVORÁVEL e oclima está ótimo, portanto  é aconselhável fazer plantação EM GRANDE ESCALA para a cultura: " + dados.get(3) + ".");
                 }
             }
-        } else if (dados.get(0) == "Bahia") {
-            if (dados.get(1) == "Ruim") {
+        } else if (dados.get(0).equals("São Paulo")) {
+            if (Objects.equals(dados.get(1), "Ruim")) {
 
-                if (dados.get(2) == "Ruim") {
-                    sugestaoTxt.setText("Local: " + dados.get(0) + "\n" + "Segundo as previsões do algoritmo o mercado não está nada FAVORÁVEL, nem o clima, portanto não é aconselhávél fazer plantações devido o clima e o mercado que trazem grandes riscos.");
-                } else if (dados.get(2) == "Médio") {
-                    sugestaoTxt.setText("Local: " + dados.get(0) + "\n" + "Segundo as previsões do algoritmo o mercado não está nada FAVORÁVEL, nem o clima, portanto não é aconselhávél fazer plantações devido o clima e o mercado que trazem grandes riscos.");
+                if (Objects.equals(dados.get(2), "Ruim")) {
+                    sugestaoTxt.setText("Local: " + dados.get(0) + "\n" + "Segundo as previsões do algoritmo o mercado não está nada FAVORÁVEL, nem o clima, portanto não é aconselhável fazer plantação devido o clima e o mercado que trazem grandes riscos.");
+                } else if (Objects.equals(dados.get(2), "Médio")) {
+                    sugestaoTxt.setText("Local: " + dados.get(0) + "\n" + "Segundo as previsões do algoritmo o mercado não está nada FAVORÁVEL, nem o clima, portanto não é aconselhável fazer plantação devido o clima e o mercado que trazem grandes riscos.");
 
-                } else if (dados.get(2) == "Bom") {
-                    sugestaoTxt.setText("Local: " + dados.get(0) + "\n" + "Segundo as previsões do algoritmo o mercado não está nada FAVORÁVEL, mas o clima está,  portanto  é aconselhávél fazer plantações EM MÉDIA ESCALA para a cultura: " + dados.get(3) + " caso deseje estocar para vender posteriormente.");
+                } else if (Objects.equals(dados.get(2), "Bom")) {
+                    sugestaoTxt.setText("Local: " + dados.get(0) + "\n" + "Segundo as previsões do algoritmo o mercado não está nada FAVORÁVEL, mas o clima está,  portanto  é aconselhável fazer plantação EM MÉDIA ESCALA para a cultura: " + dados.get(3) + " caso deseje estocar para vender posteriormente.");
 
-                } else if (dados.get(2) == "Ótimo") {
-                    sugestaoTxt.setText("Local: " + dados.get(0) + "\n" + "Segundo as previsões do algoritmo o mercado não está nada FAVORÁVEL, mas clima não está, portanto  é aconselhávél fazer plantações EM MÉDIA ESCALA: " + dados.get(3) + " caso deseje estocar para vender posteriormente.");
+                } else if (Objects.equals(dados.get(2), "Ótimo")) {
+                    sugestaoTxt.setText("Local: " + dados.get(0) + "\n" + "Segundo as previsões do algoritmo o mercado não está nada FAVORÁVEL, mas clima não está, portanto  é aconselhável fazer plantação EM MÉDIA ESCALA: " + dados.get(3) + " caso deseje estocar para vender posteriormente.");
                 }
 
-            } else if (dados.get(1) == "Médio") {
+            } else if (Objects.equals(dados.get(1), "Médio")) {
 
-                if (dados.get(2) == "Ruim") {
-                    sugestaoTxt.setText("Local: " + dados.get(0) + "\n" + "Segundo as previsões do algoritmo o mercado  está pouco FAVORÁVEL e o clima não ajuda, portanto não é aconselhávél fazer plantações devido o clima e o mercado que trazem grandes riscos.");
-                } else if (dados.get(2) == "Médio") {
-                    sugestaoTxt.setText("Local: " + dados.get(0) + "\n" + "Segundo as previsões do algoritmo o mercado  está pouco FAVORÁVEL e o clima não ajuda, portanto não é aconselhávél fazer plantações devido o clima e o mercado que trazem grandes riscos.");
+                if (Objects.equals(dados.get(2), "Ruim")) {
+                    sugestaoTxt.setText("Local: " + dados.get(0) + "\n" + "Segundo as previsões do algoritmo o mercado  está pouco FAVORÁVEL e o clima não ajuda, portanto não é aconselhável fazer plantação devido o clima e o mercado que trazem grandes riscos.");
+                } else if (Objects.equals(dados.get(2), "Médio")) {
+                    sugestaoTxt.setText("Local: " + dados.get(0) + "\n" + "Segundo as previsões do algoritmo o mercado  está pouco FAVORÁVEL e o clima não ajuda, portanto não é aconselhável fazer plantação devido o clima e o mercado que trazem grandes riscos.");
 
-                } else if (dados.get(2) == "Bom") {
-                    sugestaoTxt.setText("Local: " + dados.get(0) + "\n" + "Segundo as previsões do algoritmo o mercado  está pouco FAVORÁVEL , mas o clima está bom,  portanto  é aconselhávél fazer plantações EM MÉDIA ESCALA para a cultura: " + dados.get(3) + " caso deseje estocar para vender posteriormente.");
+                } else if (Objects.equals(dados.get(2), "Bom")) {
+                    sugestaoTxt.setText("Local: " + dados.get(0) + "\n" + "Segundo as previsões do algoritmo o mercado  está pouco FAVORÁVEL , mas o clima está bom,  portanto  é aconselhável fazer plantação EM MÉDIA ESCALA para a cultura: " + dados.get(3) + " caso deseje estocar para vender posteriormente.");
 
-                } else if (dados.get(2) == "Ótimo") {
-                    sugestaoTxt.setText("Local: " + dados.get(0) + "\n" + "Segundo as previsões do algoritmo o mercado  está pouco FAVORÁVEL, mas clima está ótimo, portanto  é aconselhávél fazer plantações EM MÉDIA ESCALA para a cultura: " + dados.get(3) + " caso deseje estocar para vender posteriormente.");
+                } else if (Objects.equals(dados.get(2), "Ótimo")) {
+                    sugestaoTxt.setText("Local: " + dados.get(0) + "\n" + "Segundo as previsões do algoritmo o mercado  está pouco FAVORÁVEL, mas clima está ótimo, portanto  é aconselhável fazer plantação EM MÉDIA ESCALA para a cultura: " + dados.get(3) + " caso deseje estocar para vender posteriormente.");
                 }
 
-            } else if (dados.get(1) == "Bom") {
+            } else if (Objects.equals(dados.get(1), "Bom")) {
 
-                if (dados.get(2) == "Ruim") {
-                    sugestaoTxt.setText("Local: " + dados.get(0) + "\n" + "Segundo as previsões do algoritmo o mercado  está bem FAVORÁVEL, mas o clima não ajuda, portanto não é aconselhávél fazer plantações devido o clima que traz grandes riscos.");
+                if (Objects.equals(dados.get(2), "Ruim")) {
+                    sugestaoTxt.setText("Local: " + dados.get(0) + "\n" + "Segundo as previsões do algoritmo o mercado  está bem FAVORÁVEL, mas o clima não ajuda, portanto não é aconselhável fazer plantação devido o clima que traz grandes riscos.");
 
-                } else if (dados.get(2) == "Médio") {
-                    sugestaoTxt.setText("Local: " + dados.get(0) + "\n" + "Segundo as previsões do algoritmo o mercado  está bem  FAVORÁVEL, mas o clima não ajuda, portanto não é aconselhávél fazer plantações devido o clima que traz grandes riscos.");
+                } else if (Objects.equals(dados.get(2), "Médio")) {
+                    sugestaoTxt.setText("Local: " + dados.get(0) + "\n" + "Segundo as previsões do algoritmo o mercado  está bem  FAVORÁVEL, mas o clima não ajuda, portanto não é aconselhável fazer plantação devido o clima que traz grandes riscos.");
 
-                } else if (dados.get(2) == "Bom") {
-                    sugestaoTxt.setText("Local: " + dados.get(0) + "\n" + "Segundo as previsões do algoritmo o mercado  está bem FAVORÁVEL e o clima está bom,  portanto  é aconselhávél fazer plantações EM MÉDIA ESCALA para a cultura: " + dados.get(3) + ".");
+                } else if (Objects.equals(dados.get(2), "Bom")) {
+                    sugestaoTxt.setText("Local: " + dados.get(0) + "\n" + "Segundo as previsões do algoritmo o mercado  está bem FAVORÁVEL e o clima está bom,  portanto  é aconselhável fazer plantação EM MÉDIA ESCALA para a cultura: " + dados.get(3) + ".");
 
-                } else if (dados.get(2) == "Ótimo") {
-                    sugestaoTxt.setText("Local: " + dados.get(0) + "\n" + "Segundo as previsões do algoritmo o mercado  está bem FAVORÁVEL e oclima está ótimo, portanto  é aconselhávél fazer plantações EM GRANDE ESCALA para a cultura: " + dados.get(3) + ".");
+                } else if (Objects.equals(dados.get(2), "Ótimo")) {
+                    sugestaoTxt.setText("Local: " + dados.get(0) + "\n" + "Segundo as previsões do algoritmo o mercado  está bem FAVORÁVEL e oclima está ótimo, portanto  é aconselhável fazer plantação EM GRANDE ESCALA para a cultura: " + dados.get(3) + ".");
                 }
 
-            } else if (dados.get(1) == "Ótimo") {
+            } else if (Objects.equals(dados.get(1), "Ótimo")) {
 
-                if (dados.get(2) == "Ruim") {
-                    sugestaoTxt.setText("Local: " + dados.get(0) + "\n" + "Segundo as previsões do algoritmo o mercado  está muito FAVORÁVEL, mas o clima não ajuda, portanto não é aconselhávél fazer plantações devido o clima que traz grandes riscos.");
+                if (Objects.equals(dados.get(2), "Ruim")) {
+                    sugestaoTxt.setText("Local: " + dados.get(0) + "\n" + "Segundo as previsões do algoritmo o mercado  está muito FAVORÁVEL, mas o clima não ajuda, portanto não é aconselhável fazer plantação devido o clima que traz grandes riscos.");
 
-                } else if (dados.get(2) == "Médio") {
-                    sugestaoTxt.setText("Local: " + dados.get(0) + "\n" + "Segundo as previsões do algoritmo o mercado  está muito  FAVORÁVEL, mas o clima não ajuda, portanto não é aconselhávél fazer plantações devido o clima que traz riscos.");
+                } else if (Objects.equals(dados.get(2), "Médio")) {
+                    sugestaoTxt.setText("Local: " + dados.get(0) + "\n" + "Segundo as previsões do algoritmo o mercado  está muito  FAVORÁVEL, mas o clima não ajuda, portanto não é aconselhável fazer plantação devido o clima que traz riscos.");
 
-                } else if (dados.get(2) == "Bom") {
-                    sugestaoTxt.setText("Local: " + dados.get(0) + "\n" + "Segundo as previsões do algoritmo o mercado  está muito FAVORÁVEL e o clima está bom,  portanto  é aconselhávél fazer plantações EM MÉDIA ESCALA para a cultura: " + dados.get(3) + ".");
+                } else if (Objects.equals(dados.get(2), "Bom")) {
+                    sugestaoTxt.setText("Local: " + dados.get(0) + "\n" + "Segundo as previsões do algoritmo o mercado  está muito FAVORÁVEL e o clima está bom,  portanto  é aconselhável fazer plantação EM MÉDIA ESCALA para a cultura: " + dados.get(3) + ".");
 
-                } else if (dados.get(2) == "Ótimo") {
-                    sugestaoTxt.setText("Local: " + dados.get(0) + "\n" + "Segundo as previsões do algoritmo o mercado  está muito FAVORÁVEL e oclima está ótimo, portanto  é aconselhávél fazer plantações EM GRANDE ESCALA para a cultura: " + dados.get(3) + ".");
-                }
-            }
-
-        } else if (dados.get(0) == "Amazonas") {
-            if (dados.get(1) == "Ruim") {
-
-                if (dados.get(2) == "Ruim") {
-                    sugestaoTxt.setText("Local: " + dados.get(0) + "\n" + "Segundo as previsões do algoritmo o mercado não está nada FAVORÁVEL, nem o clima, portanto não é aconselhávél fazer plantações devido o clima e o mercado que trazem grandes riscos.");
-                } else if (dados.get(2) == "Médio") {
-                    sugestaoTxt.setText("Local: " + dados.get(0) + "\n" + "Segundo as previsões do algoritmo o mercado não está nada FAVORÁVEL, nem o clima, portanto não é aconselhávél fazer plantações devido o clima e o mercado que trazem grandes riscos.");
-
-                } else if (dados.get(2) == "Bom") {
-                    sugestaoTxt.setText("Local: " + dados.get(0) + "\n" + "Segundo as previsões do algoritmo o mercado não está nada FAVORÁVEL, mas o clima está,  portanto  é aconselhávél fazer plantações EM MÉDIA ESCALA para a cultura: " + dados.get(3) + " caso deseje estocar para vender posteriormente.");
-
-                } else if (dados.get(2) == "Ótimo") {
-                    sugestaoTxt.setText("Local: " + dados.get(0) + "\n" + "Segundo as previsões do algoritmo o mercado não está nada FAVORÁVEL, mas clima não está, portanto  é aconselhávél fazer plantações EM MÉDIA ESCALA: " + dados.get(3) + " caso deseje estocar para vender posteriormente.");
-                }
-
-            } else if (dados.get(1) == "Médio") {
-
-                if (dados.get(2) == "Ruim") {
-                    sugestaoTxt.setText("Local: " + dados.get(0) + "\n" + "Segundo as previsões do algoritmo o mercado  está pouco FAVORÁVEL e o clima não ajuda, portanto não é aconselhávél fazer plantações devido o clima e o mercado que trazem grandes riscos.");
-                } else if (dados.get(2) == "Médio") {
-                    sugestaoTxt.setText("Local: " + dados.get(0) + "\n" + "Segundo as previsões do algoritmo o mercado  está pouco FAVORÁVEL e o clima não ajuda, portanto não é aconselhávél fazer plantações devido o clima e o mercado que trazem grandes riscos.");
-
-                } else if (dados.get(2) == "Bom") {
-                    sugestaoTxt.setText("Local: " + dados.get(0) + "\n" + "Segundo as previsões do algoritmo o mercado  está pouco FAVORÁVEL , mas o clima está bom,  portanto  é aconselhávél fazer plantações EM MÉDIA ESCALA para a cultura: " + dados.get(3) + " caso deseje estocar para vender posteriormente.");
-
-                } else if (dados.get(2) == "Ótimo") {
-                    sugestaoTxt.setText("Local: " + dados.get(0) + "\n" + "Segundo as previsões do algoritmo o mercado  está pouco FAVORÁVEL, mas clima está ótimo, portanto  é aconselhávél fazer plantações EM MÉDIA ESCALA para a cultura: " + dados.get(3) + " caso deseje estocar para vender posteriormente.");
-                }
-
-            } else if (dados.get(1) == "Bom") {
-
-                if (dados.get(2) == "Ruim") {
-                    sugestaoTxt.setText("Local: " + dados.get(0) + "\n" + "Segundo as previsões do algoritmo o mercado  está bem FAVORÁVEL, mas o clima não ajuda, portanto não é aconselhávél fazer plantações devido o clima que traz grandes riscos.");
-
-                } else if (dados.get(2) == "Médio") {
-                    sugestaoTxt.setText("Local: " + dados.get(0) + "\n" + "Segundo as previsões do algoritmo o mercado  está bem  FAVORÁVEL, mas o clima não ajuda, portanto não é aconselhávél fazer plantações devido o clima que traz grandes riscos.");
-
-                } else if (dados.get(2) == "Bom") {
-                    sugestaoTxt.setText("Local: " + dados.get(0) + "\n" + "Segundo as previsões do algoritmo o mercado  está bem FAVORÁVEL e o clima está bom,  portanto  é aconselhávél fazer plantações EM MÉDIA ESCALA para a cultura: " + dados.get(3) + ".");
-
-                } else if (dados.get(2) == "Ótimo") {
-                    sugestaoTxt.setText("Local: " + dados.get(0) + "\n" + "Segundo as previsões do algoritmo o mercado  está bem FAVORÁVEL e oclima está ótimo, portanto  é aconselhávél fazer plantações EM GRANDE ESCALA para a cultura: " + dados.get(3) + ".");
-                }
-
-            } else if (dados.get(1) == "Ótimo") {
-
-                if (dados.get(2) == "Ruim") {
-                    sugestaoTxt.setText("Local: " + dados.get(0) + "\n" + "Segundo as previsões do algoritmo o mercado  está muito FAVORÁVEL, mas o clima não ajuda, portanto não é aconselhávél fazer plantações devido o clima que traz grandes riscos.");
-
-                } else if (dados.get(2) == "Médio") {
-                    sugestaoTxt.setText("Local: " + dados.get(0) + "\n" + "Segundo as previsões do algoritmo o mercado  está muito  FAVORÁVEL, mas o clima não ajuda, portanto não é aconselhávél fazer plantações devido o clima que traz riscos.");
-
-                } else if (dados.get(2) == "Bom") {
-                    sugestaoTxt.setText("Local: " + dados.get(0) + "\n" + "Segundo as previsões do algoritmo o mercado  está muito FAVORÁVEL e o clima está bom,  portanto  é aconselhávél fazer plantações EM MÉDIA ESCALA para a cultura: " + dados.get(3) + ".");
-
-                } else if (dados.get(2) == "Ótimo") {
-                    sugestaoTxt.setText("Local: " + dados.get(0) + "\n" + "Segundo as previsões do algoritmo o mercado  está muito FAVORÁVEL e oclima está ótimo, portanto  é aconselhávél fazer plantações EM GRANDE ESCALA para a cultura: " + dados.get(3) + ".");
+                } else if (Objects.equals(dados.get(2), "Ótimo")) {
+                    sugestaoTxt.setText("Local: " + dados.get(0) + "\n" + "Segundo as previsões do algoritmo o mercado  está muito FAVORÁVEL e oclima está ótimo, portanto  é aconselhável fazer plantação EM GRANDE ESCALA para a cultura: " + dados.get(3) + ".");
                 }
             }
+        } else if (dados.get(0).equals("Bahia")) {
+            if (Objects.equals(dados.get(1), "Ruim")) {
+
+                if (Objects.equals(dados.get(2), "Ruim")) {
+                    sugestaoTxt.setText("Local: " + dados.get(0) + "\n" + "Segundo as previsões do algoritmo o mercado não está nada FAVORÁVEL, nem o clima, portanto não é aconselhável fazer plantação devido o clima e o mercado que trazem grandes riscos.");
+                } else if (Objects.equals(dados.get(2), "Médio")) {
+                    sugestaoTxt.setText("Local: " + dados.get(0) + "\n" + "Segundo as previsões do algoritmo o mercado não está nada FAVORÁVEL, nem o clima, portanto não é aconselhável fazer plantação devido o clima e o mercado que trazem grandes riscos.");
+
+                } else if (Objects.equals(dados.get(2), "Bom")) {
+                    sugestaoTxt.setText("Local: " + dados.get(0) + "\n" + "Segundo as previsões do algoritmo o mercado não está nada FAVORÁVEL, mas o clima está,  portanto  é aconselhável fazer plantação EM MÉDIA ESCALA para a cultura: " + dados.get(3) + " caso deseje estocar para vender posteriormente.");
+
+                } else if (Objects.equals(dados.get(2), "Ótimo")) {
+                    sugestaoTxt.setText("Local: " + dados.get(0) + "\n" + "Segundo as previsões do algoritmo o mercado não está nada FAVORÁVEL, mas clima não está, portanto  é aconselhável fazer plantação EM MÉDIA ESCALA: " + dados.get(3) + " caso deseje estocar para vender posteriormente.");
+                }
+
+            } else if (Objects.equals(dados.get(1), "Médio")) {
+
+                if (Objects.equals(dados.get(2), "Ruim")) {
+                    sugestaoTxt.setText("Local: " + dados.get(0) + "\n" + "Segundo as previsões do algoritmo o mercado  está pouco FAVORÁVEL e o clima não ajuda, portanto não é aconselhável fazer plantação devido o clima e o mercado que trazem grandes riscos.");
+                } else if (Objects.equals(dados.get(2), "Médio")) {
+                    sugestaoTxt.setText("Local: " + dados.get(0) + "\n" + "Segundo as previsões do algoritmo o mercado  está pouco FAVORÁVEL e o clima não ajuda, portanto não é aconselhável fazer plantação devido o clima e o mercado que trazem grandes riscos.");
+
+                } else if (Objects.equals(dados.get(2), "Bom")) {
+                    sugestaoTxt.setText("Local: " + dados.get(0) + "\n" + "Segundo as previsões do algoritmo o mercado  está pouco FAVORÁVEL , mas o clima está bom,  portanto  é aconselhável fazer plantação EM MÉDIA ESCALA para a cultura: " + dados.get(3) + " caso deseje estocar para vender posteriormente.");
+
+                } else if (Objects.equals(dados.get(2), "Ótimo")) {
+                    sugestaoTxt.setText("Local: " + dados.get(0) + "\n" + "Segundo as previsões do algoritmo o mercado  está pouco FAVORÁVEL, mas clima está ótimo, portanto  é aconselhável fazer plantação EM MÉDIA ESCALA para a cultura: " + dados.get(3) + " caso deseje estocar para vender posteriormente.");
+                }
+
+            } else if (Objects.equals(dados.get(1), "Bom")) {
+
+                if (Objects.equals(dados.get(2), "Ruim")) {
+                    sugestaoTxt.setText("Local: " + dados.get(0) + "\n" + "Segundo as previsões do algoritmo o mercado  está bem FAVORÁVEL, mas o clima não ajuda, portanto não é aconselhável fazer plantação devido o clima que traz grandes riscos.");
+
+                } else if (Objects.equals(dados.get(2), "Médio")) {
+                    sugestaoTxt.setText("Local: " + dados.get(0) + "\n" + "Segundo as previsões do algoritmo o mercado  está bem  FAVORÁVEL, mas o clima não ajuda, portanto não é aconselhável fazer plantação devido o clima que traz grandes riscos.");
+
+                } else if (Objects.equals(dados.get(2), "Bom")) {
+                    sugestaoTxt.setText("Local: " + dados.get(0) + "\n" + "Segundo as previsões do algoritmo o mercado  está bem FAVORÁVEL e o clima está bom,  portanto  é aconselhável fazer plantação EM MÉDIA ESCALA para a cultura: " + dados.get(3) + ".");
+
+                } else if (Objects.equals(dados.get(2), "Ótimo")) {
+                    sugestaoTxt.setText("Local: " + dados.get(0) + "\n" + "Segundo as previsões do algoritmo o mercado  está bem FAVORÁVEL e oclima está ótimo, portanto  é aconselhável fazer plantação EM GRANDE ESCALA para a cultura: " + dados.get(3) + ".");
+                }
+
+            } else if (Objects.equals(dados.get(1), "Ótimo")) {
+
+                if (Objects.equals(dados.get(2), "Ruim")) {
+                    sugestaoTxt.setText("Local: " + dados.get(0) + "\n" + "Segundo as previsões do algoritmo o mercado  está muito FAVORÁVEL, mas o clima não ajuda, portanto não é aconselhável fazer plantação devido o clima que traz grandes riscos.");
+
+                } else if (Objects.equals(dados.get(2), "Médio")) {
+                    sugestaoTxt.setText("Local: " + dados.get(0) + "\n" + "Segundo as previsões do algoritmo o mercado  está muito  FAVORÁVEL, mas o clima não ajuda, portanto não é aconselhável fazer plantação devido o clima que traz riscos.");
+
+                } else if (Objects.equals(dados.get(2), "Bom")) {
+                    sugestaoTxt.setText("Local: " + dados.get(0) + "\n" + "Segundo as previsões do algoritmo o mercado  está muito FAVORÁVEL e o clima está bom,  portanto  é aconselhável fazer plantação EM MÉDIA ESCALA para a cultura: " + dados.get(3) + ".");
+
+                } else if (Objects.equals(dados.get(2), "Ótimo")) {
+                    sugestaoTxt.setText("Local: " + dados.get(0) + "\n" + "Segundo as previsões do algoritmo o mercado  está muito FAVORÁVEL e oclima está ótimo, portanto  é aconselhável fazer plantação EM GRANDE ESCALA para a cultura: " + dados.get(3) + ".");
+                }
+            }
+        } else if (dados.get(0).equals("Amazonas")) {
+            if (Objects.equals(dados.get(1), "Ruim")) {
+
+                if (Objects.equals(dados.get(2), "Ruim")) {
+                    sugestaoTxt.setText("Local: " + dados.get(0) + "\n" + "Segundo as previsões do algoritmo o mercado não está nada FAVORÁVEL, nem o clima, portanto não é aconselhável fazer plantação devido o clima e o mercado que trazem grandes riscos.");
+                } else if (Objects.equals(dados.get(2), "Médio")) {
+                    sugestaoTxt.setText("Local: " + dados.get(0) + "\n" + "Segundo as previsões do algoritmo o mercado não está nada FAVORÁVEL, nem o clima, portanto não é aconselhável fazer plantação devido o clima e o mercado que trazem grandes riscos.");
+
+                } else if (Objects.equals(dados.get(2), "Bom")) {
+                    sugestaoTxt.setText("Local: " + dados.get(0) + "\n" + "Segundo as previsões do algoritmo o mercado não está nada FAVORÁVEL, mas o clima está,  portanto  é aconselhável fazer plantação EM MÉDIA ESCALA para a cultura: " + dados.get(3) + " caso deseje estocar para vender posteriormente.");
+
+                } else if (Objects.equals(dados.get(2), "Ótimo")) {
+                    sugestaoTxt.setText("Local: " + dados.get(0) + "\n" + "Segundo as previsões do algoritmo o mercado não está nada FAVORÁVEL, mas clima não está, portanto  é aconselhável fazer plantação EM MÉDIA ESCALA: " + dados.get(3) + " caso deseje estocar para vender posteriormente.");
+                }
+
+            } else if (Objects.equals(dados.get(1), "Médio")) {
+
+                if (Objects.equals(dados.get(2), "Ruim")) {
+                    sugestaoTxt.setText("Local: " + dados.get(0) + "\n" + "Segundo as previsões do algoritmo o mercado  está pouco FAVORÁVEL e o clima não ajuda, portanto não é aconselhável fazer plantação devido o clima e o mercado que trazem grandes riscos.");
+                } else if (Objects.equals(dados.get(2), "Médio")) {
+                    sugestaoTxt.setText("Local: " + dados.get(0) + "\n" + "Segundo as previsões do algoritmo o mercado  está pouco FAVORÁVEL e o clima não ajuda, portanto não é aconselhável fazer plantação devido o clima e o mercado que trazem grandes riscos.");
+
+                } else if (Objects.equals(dados.get(2), "Bom")) {
+                    sugestaoTxt.setText("Local: " + dados.get(0) + "\n" + "Segundo as previsões do algoritmo o mercado  está pouco FAVORÁVEL , mas o clima está bom,  portanto  é aconselhável fazer plantação EM MÉDIA ESCALA para a cultura: " + dados.get(3) + " caso deseje estocar para vender posteriormente.");
+
+                } else if (Objects.equals(dados.get(2), "Ótimo")) {
+                    sugestaoTxt.setText("Local: " + dados.get(0) + "\n" + "Segundo as previsões do algoritmo o mercado  está pouco FAVORÁVEL, mas clima está ótimo, portanto  é aconselhável fazer plantação EM MÉDIA ESCALA para a cultura: " + dados.get(3) + " caso deseje estocar para vender posteriormente.");
+                }
+
+            } else if (Objects.equals(dados.get(1), "Bom")) {
+
+                if (Objects.equals(dados.get(2), "Ruim")) {
+                    sugestaoTxt.setText("Local: " + dados.get(0) + "\n" + "Segundo as previsões do algoritmo o mercado  está bem FAVORÁVEL, mas o clima não ajuda, portanto não é aconselhável fazer plantação devido o clima que traz grandes riscos.");
+
+                } else if (Objects.equals(dados.get(2), "Médio")) {
+                    sugestaoTxt.setText("Local: " + dados.get(0) + "\n" + "Segundo as previsões do algoritmo o mercado  está bem  FAVORÁVEL, mas o clima não ajuda, portanto não é aconselhável fazer plantação devido o clima que traz grandes riscos.");
+
+                } else if (Objects.equals(dados.get(2), "Bom")) {
+                    sugestaoTxt.setText("Local: " + dados.get(0) + "\n" + "Segundo as previsões do algoritmo o mercado  está bem FAVORÁVEL e o clima está bom,  portanto  é aconselhável fazer plantação EM MÉDIA ESCALA para a cultura: " + dados.get(3) + ".");
+
+                } else if (Objects.equals(dados.get(2), "Ótimo")) {
+                    sugestaoTxt.setText("Local: " + dados.get(0) + "\n" + "Segundo as previsões do algoritmo o mercado  está bem FAVORÁVEL e oclima está ótimo, portanto  é aconselhável fazer plantação EM GRANDE ESCALA para a cultura: " + dados.get(3) + ".");
+                }
+
+            } else if (Objects.equals(dados.get(1), "Ótimo")) {
+
+                if (Objects.equals(dados.get(2), "Ruim")) {
+                    sugestaoTxt.setText("Local: " + dados.get(0) + "\n" + "Segundo as previsões do algoritmo o mercado  está muito FAVORÁVEL, mas o clima não ajuda, portanto não é aconselhável fazer plantação devido o clima que traz grandes riscos.");
+
+                } else if (Objects.equals(dados.get(2), "Médio")) {
+                    sugestaoTxt.setText("Local: " + dados.get(0) + "\n" + "Segundo as previsões do algoritmo o mercado  está muito  FAVORÁVEL, mas o clima não ajuda, portanto não é aconselhável fazer plantação devido o clima que traz riscos.");
+
+                } else if (Objects.equals(dados.get(2), "Bom")) {
+                    sugestaoTxt.setText("Local: " + dados.get(0) + "\n" + "Segundo as previsões do algoritmo o mercado  está muito FAVORÁVEL e o clima está bom,  portanto  é aconselhável fazer plantação EM MÉDIA ESCALA para a cultura: " + dados.get(3) + ".");
+
+                } else if (Objects.equals(dados.get(2), "Ótimo")) {
+                    sugestaoTxt.setText("Local: " + dados.get(0) + "\n" + "Segundo as previsões do algoritmo o mercado  está muito FAVORÁVEL e oclima está ótimo, portanto  é aconselhável fazer plantação EM GRANDE ESCALA para a cultura: " + dados.get(3) + ".");
+                }
+            }
+        } else {
+            sugestaoTxt.setText("Previsão ainda não calculada para: " + dados.get(0));
         }
-
     }
 
 
